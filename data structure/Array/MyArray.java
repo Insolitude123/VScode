@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class MyArray {
-    public static void main(String[] args) 
+    public static void main(String[] args){ 
         int[] elements = new int[3];
         elements[2]=10;
         System.out.println("elements.length="+elements.length);
