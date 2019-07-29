@@ -12,6 +12,7 @@ public class ArraySearch {
                 index=i;
             }
         }
+        
         System.out.println("index="+index);
 
         //二分法查找
