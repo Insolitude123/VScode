@@ -2,17 +2,14 @@ import java.util.Arrays;;
 public class MyArrayList {
     private int[] elements;
 
-    // 构造器
     public MyArrayList() {
         elements = new int[0];
     }
 
-    // 获取数组长度的方法
     public int getLength() {
         return elements.length;
     }
 
-    //输出数组中所有元素
     public void show() {
         System.out.println(Arrays.toString(elements));
     }

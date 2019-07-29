@@ -3,7 +3,7 @@
  */
 public class ArraySearch {
     public static void main(String[] args) {
-        //线性查找
+        //line
         int[] arr= new int[]{9,7,2,4,51,62,72,23,1};
         int target=0;
         int index=-1;
@@ -15,7 +15,7 @@ public class ArraySearch {
         
         System.out.println("index="+index);
 
-        //二分法查找
+        //binary search
         arr=new int[]{1,2,3,4,5,6,7,8,9};
         target=1;
         index=-1;
