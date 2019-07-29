@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestMyArrayList",
+            "request": "launch",
+            "mainClass": "TestMyArrayList",
+            "projectName": "VScode_18c4aabe"
+        }
+    ]
+}
