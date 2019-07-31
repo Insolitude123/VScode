@@ -1,3 +1,4 @@
+package stackandqueue;
 public class TestMyStack {
     public static void main(String[] args) {
         MyStack ms=new MyStack();

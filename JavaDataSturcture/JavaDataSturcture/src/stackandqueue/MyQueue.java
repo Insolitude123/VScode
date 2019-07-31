@@ -1,40 +1,38 @@
+package stackandqueue;
 /**
- * MyStack
+ * MyQueue
  */
-public class MyStack {
-     private int[] elements;
+public class MyQueue {
+    private int[] elements;
     
-    public MyStack(){
+    public MyQueue(){
         elements=new int[0];
     }
 
-    public void push(int element) {
+    public void add(int element) {
         int[] newArr=new int[elements.length+1];
         for (int i = 0; i < elements.length; i++) {
-             newArr[i]=elements[i];
+            newArr[i]=elements[i];
         }
         newArr[newArr.length-1]=element;
         elements=newArr;
     }
 
-    public int pop() {
+    public int poll(){
         if (elements.length==0) {
-            throw new RuntimeException("Stack is empty!");
+            throw new RuntimeException("Queue is Empty");
         }
         int[] newArr=new int[elements.length-1];
-        int element=elements[elements.length-1];
+        int element=elements[0];
         for (int i = 0; i < newArr.length; i++) {
-            newArr[i]=elements[i];
+            newArr[i]=elements[i+1];
         }
         elements=newArr;
         return element;
     }
 
-    public int peek(){
-        if (elements.length==0) {
-            throw new RuntimeException("Stack is empty!");
-        }
-        return elements[elements.length-1];
+    public int peek() {
+        return elements[0];
     }
 
     public boolean isEmpty(){

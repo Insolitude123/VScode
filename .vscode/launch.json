@@ -2,6 +2,65 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ArraySearch",
+            "request": "launch",
+            "mainClass": "array.ArraySearch",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - hello",
+            "request": "launch",
+            "mainClass": "hello"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestMyNode",
+            "request": "launch",
+            "mainClass": "TestMyNode"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestMyNode",
+            "request": "launch",
+            "mainClass": "linkedlist.TestMyNode"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestMyArrayList",
+            "request": "launch",
+            "mainClass": "TestMyArrayList"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestMyStack",
+            "request": "launch",
+            "mainClass": "TestMyStack",
+            "projectName": "VScode_18c4aabe"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MyArray",
+            "request": "launch",
+            "mainClass": "MyArray",
+            "projectName": "VScode_18c4aabe"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - hello",
+            "request": "launch",
+            "mainClass": "hello",
+            "projectName": "VScode_18c4aabe"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestMyNode",
+            "request": "launch",
+            "mainClass": "TestMyNode",
+            "projectName": "VScode_18c4aabe"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TestMyArrayList",
             "request": "launch",
             "mainClass": "TestMyArrayList",

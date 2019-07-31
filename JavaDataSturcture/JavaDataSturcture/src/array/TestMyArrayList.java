@@ -1,3 +1,4 @@
+package array;
 public class TestMyArrayList {
     public static void main(String[] args) {
         MyArrayList mal = new MyArrayList();
