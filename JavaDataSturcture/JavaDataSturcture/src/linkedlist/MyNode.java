@@ -1,4 +1,5 @@
 package linkedlist;
+
 public class MyNode {
     private int val;
     private MyNode next;
@@ -37,7 +38,7 @@ public class MyNode {
                     currentNode.next = newNext;
                 }
                 currentNode = currentNode.next;
-                if (currentNode!=null) {
+                if (currentNode != null) {
                     newNext = currentNode.next.next;
                 }
             }
@@ -45,27 +46,27 @@ public class MyNode {
         size--;
     }
 
-    public void insert(int index,int val){
-        if (index > size || index <= 0) {
+    public void insert(int index, int val) {
+        if (index > size + 1 || index <= 0) {
             throw new RuntimeException("Index error");
         }
-        MyNode currentNode=this;
-        MyNode newNode=new MyNode(val);
-        if (index==1) {
-            this.val=this.val^newNode.val;
-            newNode.val=this.val^newNode.val;
-            this.val=this.val^newNode.val;
-            newNode.next=currentNode.next;
-            currentNode.next=newNode;
+        MyNode currentNode = this;
+        MyNode newNode = new MyNode(val);
+        if (index == 1) {
+            this.val = this.val ^ newNode.val;
+            newNode.val = this.val ^ newNode.val;
+            this.val = this.val ^ newNode.val;
+            newNode.next = currentNode.next;
+            currentNode.next = newNode;
         }
 
         for (int i = 2; i <= index; i++) {
-            if (i==index) {
-                newNode.next=currentNode.next;
-                currentNode.next=newNode;
+            if (i == index) {
+                newNode.next = currentNode.next;
+                currentNode.next = newNode;
                 break;
             }
-            currentNode=currentNode.next;
+            currentNode = currentNode.next;
 
         }
         size++;
@@ -92,8 +93,8 @@ public class MyNode {
         return this.val;
     }
 
-    public int getSize() {
-        return size;
+    public void getSize() {
+        System.out.println("size=" + size);
     }
 
     public boolean isLast() {

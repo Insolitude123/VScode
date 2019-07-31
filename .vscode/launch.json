@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - TestMyLoopNode",
+            "request": "launch",
+            "mainClass": "linkedlist.TestMyLoopNode",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ArraySearch",
             "request": "launch",
             "mainClass": "array.ArraySearch",

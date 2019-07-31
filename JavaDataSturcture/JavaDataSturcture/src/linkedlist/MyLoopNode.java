@@ -54,8 +54,8 @@ public class MyLoopNode {
     }
 
     @Test
-    public void insert(int index,int val) {
-        if (index > size || index <= 0) {
+    public void insert(int index, int val) {
+        if (index > size + 1 || index <= 0) {
             throw new RuntimeException("Index error");
         }
         MyLoopNode currentNode = this;
@@ -87,12 +87,12 @@ public class MyLoopNode {
         MyLoopNode currentNode = this;
         System.out.print("LinkedList:");
         int i = 1;
-        while (i > size) {
+        while (i <= size) {
             System.out.print(currentNode.val + " -->");
             currentNode = currentNode.next;
             i++;
         }
-        System.out.println(currentNode);
+        System.out.println(currentNode.val);
     }
 
     public MyLoopNode getNext() {
@@ -104,7 +104,8 @@ public class MyLoopNode {
     }
 
     public void getSize() {
-        System.out.println("size="+size);;
+        System.out.println("size=" + size);
+        ;
     }
 
     public boolean isLast() {

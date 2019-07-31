@@ -19,6 +19,7 @@ public class TestMyNode {
         mn.getSize();
         mn.show();
         mn.insert(1, 9);
+        mn.getSize();
         mn.insert(6, 10);
         mn.insert(2, 7);
         mn.getSize();
