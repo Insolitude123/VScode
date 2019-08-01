@@ -2,6 +2,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - TestMyStack",
+            "request": "launch",
+            "mainClass": "stackandqueue.TestMyStack",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestMyQueue",
+            "request": "launch",
+            "mainClass": "stackandqueue.TestMyQueue",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MyArray",
+            "request": "launch",
+            "mainClass": "array.MyArray",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestMyArrayList",
+            "request": "launch",
+            "mainClass": "array.TestMyArrayList",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TestMyLoopNode",
             "request": "launch",
             "mainClass": "linkedlist.TestMyLoopNode",
