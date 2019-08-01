@@ -1,0 +1,4 @@
+leetcode文件夹下文件为LeetCode题库中的个人作业
+文件名Task后的数字为LeetCode题库中的题号
+Task876的官方解法方法1未完成
+Task21的官方解法2未完成
