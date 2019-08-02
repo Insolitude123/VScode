@@ -2,7 +2,7 @@ package linkedlist;
 
 import org.junit.Test;
 
-public class TestMyLoopNode {
+public class MyLoopNodeTest {
     @Test
     public void test1(){
         MyLoopNode mln=new MyLoopNode(1);

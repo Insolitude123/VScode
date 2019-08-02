@@ -2,6 +2,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Hanoi",
+            "request": "launch",
+            "mainClass": "recursion.Hanoi",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Fibonacci",
+            "request": "launch",
+            "mainClass": "recursion.Fibonacci",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MyNodeTest",
+            "request": "launch",
+            "mainClass": "linkedlist.MyNodeTest",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MyArrayListTest",
+            "request": "launch",
+            "mainClass": "array.MyArrayListTest",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TestMyStack",
             "request": "launch",
             "mainClass": "stackandqueue.TestMyStack",

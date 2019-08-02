@@ -26,7 +26,7 @@ public class MyArrayList {
 
     public void delete(int index) {
         if (index<0||index>elements.length) {
-            throw new RuntimeException("无效索引");
+            throw new RuntimeException();
         }
         int[] newArr=new int[elements.length-1];
         for (int i = 0; i < newArr.length; i++) {
@@ -41,14 +41,14 @@ public class MyArrayList {
 
     public int get(int index) {
         if (index<0||index>elements.length) {
-            throw new RuntimeException("无效索引");
+            throw new RuntimeException();
         }
         return elements[index];
     }
 
     public void insert(int index,int element) {
         if (index<0||index>elements.length) {
-            throw new RuntimeException("无效索引");
+            throw new RuntimeException();
         }
         int[] newArr =new int[elements.length+1];
         for (int i = 0; i < elements.length; i++) {
@@ -64,7 +64,7 @@ public class MyArrayList {
 
     public void update(int index,int element) {
         if (index<0||index>elements.length) {
-            throw new RuntimeException("无效索引");
+            throw new RuntimeException();
         }
         elements[index]=element;
     }

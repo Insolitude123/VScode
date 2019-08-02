@@ -1,8 +1,9 @@
 package stackandqueue;
 
 import org.junit.Test;
+import org.junit.Assert;
 
-public class TestMyStack {
+public class MyStackTest {
     @Test
     public void test1() {
         MyStack ms=new MyStack();
@@ -12,15 +13,12 @@ public class TestMyStack {
         ms.push(8);
         ms.push(4);
         ms.push(1);
-        System.out.println(ms.peek());
-        System.out.println(ms.pop());
-        System.out.println(ms.peek());
-        System.out.println(ms.pop());
-        System.out.println(ms.peek());
-        System.out.println(ms.pop());
-        System.out.println(ms.peek());
-        System.out.println(ms.pop());
-        System.out.println(ms.peek());
+        Assert.assertEquals(1, ms.pop());
+        Assert.assertEquals(4, ms.pop());
+        Assert.assertEquals(8, ms.pop());
+        Assert.assertEquals(5, ms.pop());
+        Assert.assertEquals(7, ms.pop());
+
     }
 
     public static void main(String[] args) {

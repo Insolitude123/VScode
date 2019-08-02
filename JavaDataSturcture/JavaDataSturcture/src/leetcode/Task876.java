@@ -33,12 +33,3 @@ public class Task876 {
         return slow;
     }
 }
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}

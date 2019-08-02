@@ -1,8 +1,9 @@
 package linkedlist;
 
 import org.junit.Test;
+import org.junit.Assert;
 
-public class TestMyNode {
+public class MyNodeTest {
     @Test
     public void test1() {
         MyNode mn=new MyNode(1);
@@ -11,9 +12,8 @@ public class TestMyNode {
         mn.append(4);
         mn.append(5);
         mn.append(6);
-        System.out.println(mn.getNext().getVal());
-        System.out.println(mn.getNext().getNext().isLast());
-        mn.getSize();
+        Assert.assertEquals(2,mn.getNext().getVal());
+        Assert.assertFalse(mn.getNext().getNext().isLast());
         mn.show();
         mn.delete(6);
         mn.getSize();
