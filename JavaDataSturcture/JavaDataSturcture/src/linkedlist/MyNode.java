@@ -23,6 +23,20 @@ public class MyNode {
         size++;
     }
 
+    public static MyNode arrayToMyNode(int[] arr) {
+        if (arr.length == 0) {
+            throw new RuntimeException();
+        }
+        MyNode root = new MyNode(arr[0]);
+        MyNode other = root;
+        for (int i = 1; i < arr.length; i++) {
+            root.next = new MyNode(arr[i]);
+            root = root.next;
+        }
+        root.size = arr.length;
+        return other;
+    }
+
     public void delete(int index) {
         if (index <= 0 || index > size || size == 0) {
             throw new RuntimeException("Index error");

@@ -27,6 +27,8 @@ public class MyNodeTest {
         mn.insert(2, 7);
         mn.getSize();
         mn.show();
+        MyNode newMN = MyNode.arrayToMyNode(new int[]{0,1,2,3,4,5});
+        newMN.show();
     }
 
     public static void main(String[] args) {
@@ -52,6 +54,8 @@ public class MyNodeTest {
         mn.insert(2, 7);
         mn.getSize();
         mn.show();
+        MyNode newMN = MyNode.arrayToMyNode(new int[]{0,1,2,3,4,5});
+        newMN.show();
                 
     }
 }
