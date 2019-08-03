@@ -7,18 +7,18 @@ import java.util.Arrays;;
  */
 public class BubbleSort {
     public static void main(String[] args) {
-        int[] arr = new int[] { 95,85,12,52,64,74,105,502,4,7,6,1,74,60,141,19,34,45,59 };
-        long start=System.nanoTime();
+        int[] arr = new int[] { 95, 85, 12, 52, 64, 74, 105, 502, 4, 7, 6, 1, 74, 60, 141, 19, 34, 45, 59 };
+        long start = System.nanoTime();
         System.out.println(Arrays.toString(arr));
-        BubbleSort.bubbleSortOptimization2(arr);
+        BubbleSort.bubbleSortOptimization3(arr);
         System.out.println(Arrays.toString(arr));
-        long end=System.nanoTime();
-        System.out.println("花费了"+(end-start)+"纳秒");
+        long end = System.nanoTime();
+        System.out.println("花费了" + (end - start) + "纳秒");
 
     }
 
     public static void bubbleSort(int[] arr) {
-        //花费2060299纳秒
+        // 花费2060299纳秒
         if (arr.length == 0) {
             throw new RuntimeException("This param arr is null");
         }
@@ -35,19 +35,19 @@ public class BubbleSort {
     }
 
     public static void bubbleSortOptimization1(int[] arr) {
-        //花费1232381纳秒
+        // 花费1232381纳秒
         if (arr.length == 0) {
             throw new RuntimeException("This param arr is null");
         }
 
         for (int i = 0; i < arr.length - 1; i++) {
-            boolean isSwap=false;
+            boolean isSwap = false;
             for (int j = 0; j < arr.length - 1 - i; j++) {
                 if (arr[j] > arr[j + 1]) {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
-                    isSwap=true;
+                    isSwap = true;
                 }
             }
             if (!isSwap) {
@@ -57,27 +57,61 @@ public class BubbleSort {
     }
 
     public static void bubbleSortOptimization2(int[] arr) {
-        //花费536376纳秒
+        // 花费536376纳秒
         if (arr.length == 0) {
             throw new RuntimeException("This param arr is null");
         }
 
-        int n=arr.length-1;
+        int n = arr.length - 1;
         for (int i = 0; i < arr.length - 1; i++) {
-            int newN=0;
+            int newN = 0;
             for (int j = 0; j < n; j++) {
                 if (arr[j] > arr[j + 1]) {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
-                    newN=j+1;
+                    newN = j + 1;
                 }
             }
-            n=newN;
-            if (n==0) {
+            n = newN;
+            if (n == 0) {
                 break;
             }
         }
+    }
+
+    public static void bubbleSortOptimization3(int[] arr) {
+        if (arr.length == 0) {
+            throw new RuntimeException("This param arr is null");
+        }
+
+        int startPoint = 0;
+        int endPoint = arr.length - 1;
+
+        while (startPoint <= endPoint) {
+            int newEndPoint = startPoint;
+            int newStartPoint = endPoint;
+
+            for (int j = startPoint; j < endPoint; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    newEndPoint = j + 1;
+                }
+            }
+            endPoint = newEndPoint - 1;
+            for (int j = endPoint; j > startPoint; j--) {
+                if (arr[j] < arr[j - 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j - 1];
+                    arr[j - 1] = temp;
+                    newStartPoint = j - 1;
+                }
+            }
+            startPoint = newStartPoint + 1;
+        }
+
     }
 
 }
