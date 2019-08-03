@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - BubbleSort",
+            "request": "launch",
+            "mainClass": "sort.BubbleSort",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Hanoi",
             "request": "launch",
             "mainClass": "recursion.Hanoi",
