@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - MySort",
+            "request": "launch",
+            "mainClass": "sort.MySort",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - InsertSort",
+            "request": "launch",
+            "mainClass": "sort.InsertSort",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - QuickSort",
             "request": "launch",
             "mainClass": "sort.QuickSort",

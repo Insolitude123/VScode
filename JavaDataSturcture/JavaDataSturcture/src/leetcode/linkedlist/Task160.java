@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.linkedlist;
 
 /**
  * Task160 编写一个程序，找到两个单链表相交的起始节点。
@@ -19,7 +19,8 @@ package leetcode;
  * 
  * Definition for singly-linked list.
  * public class ListNode {
- *  int val; ListNode next;
+ *  int val;
+ *  ListNode next;
  *  ListNode(int x) {
  *  val = x;
  *  next = null;
@@ -30,10 +31,18 @@ public class Task160 {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode pA=headA;
         ListNode pB=headB;
+        ListNode result=null;
         while (pA!=pB) {
+            
             pA=pA!=null?pA.next:headB;
             pB=pB!=null?pB.next:headA;
+            if (pA==null||pB==null) {
+                ;
+            }else if (pA.val==pB.val) {
+                result=pA;
+                break;
+            }
         }
-        return pA;
+        return result;
     }
 }
