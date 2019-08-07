@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ShellSort",
+            "request": "launch",
+            "mainClass": "sort.ShellSort",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - MySort",
             "request": "launch",
             "mainClass": "sort.MySort",

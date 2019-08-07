@@ -20,12 +20,22 @@ public class MySort {
         for (int i = 0; i < arr.length; i++) {
             arr[i]=i;
         }
-        System.out.println(Arrays.toString(arr));
+        // System.out.println(Arrays.toString(arr));
         //调用测试方法
         int[] newArr = ms.MyQuestion(arr);
         //对比测试前后结束
-        System.out.println(Arrays.toString(newArr));
-        System.out.println(Arrays.equals(arr, newArr));
+        // System.out.println(Arrays.toString(newArr));
+        // System.out.println(Arrays.equals(arr, newArr));
+        boolean b=true;
+        for (int i = 0; i < newArr.length; i++) {
+            if (b==false) {
+                break;
+            }
+            if (newArr[i]!=i) {
+                b=false;
+            }
+        }
+        System.out.println(b);
     }
 
     

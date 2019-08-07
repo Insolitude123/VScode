@@ -1,6 +1,9 @@
 package sort;
 
 import org.junit.Test;
+
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Assert;
 
 /**
@@ -20,5 +23,15 @@ public class MySortTest {
         int[] newArr = ms.MyQuestion(arr);
         //对比测试结果
         Assert.assertArrayEquals(arr, newArr);
+        boolean b=true;
+        for (int i = 0; i < newArr.length; i++) {
+            if (b==false) {
+                break;
+            }
+            if (newArr[i]!=i) {
+                b=false;
+            }
+        }
+        assertTrue(b);
     }
 }
