@@ -3,8 +3,6 @@ package sort;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import org.junit.Test;
-import org.junit.Assert;
 
 /**
  * MySort
@@ -16,11 +14,6 @@ import org.junit.Assert;
 public class MySort {
     public static void main(String[] args) {
         MySort ms=new MySort();
-        ms.MyQuestion();
-    }
-
-    @Test
-    public void MyQuestion() {
         //构建长度200的数组
         int[] arr = new int[200];
         //给数组赋值
@@ -28,17 +21,27 @@ public class MySort {
             arr[i]=i;
         }
         System.out.println(Arrays.toString(arr));
+        //调用测试方法
+        int[] newArr = ms.MyQuestion(arr);
+        //对比测试前后结束
+        System.out.println(Arrays.toString(newArr));
+        System.out.println(Arrays.equals(arr, newArr));
+    }
+
+    
+    public int[] MyQuestion(int[] arr) {
+        if (arr==null||arr.length==0) {
+            throw new RuntimeException("This arr is null");
+        }
+        
         //随机打乱数组
         int[] newArr=MySort.shuffle(arr);
         System.out.println(Arrays.toString(newArr));
         //排序
         QuickSort.quickSort(newArr, 0, newArr.length-1);
         
-        System.out.println(Arrays.toString(newArr));
-        //比较数组是否相同
-        System.out.println(Arrays.equals(arr, newArr));
-        Assert.assertArrayEquals(arr, newArr);
 
+        return newArr;
 
     }
 
