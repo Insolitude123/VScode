@@ -10,6 +10,24 @@ public class BinaryTree {
         this.root=root;
     }
 
+    public void showDLR(){
+        if (this==null||this.root==null) {
+            throw new RuntimeException();
+        }
+        root.showDLR();
+    }
+
+    public void showLDR(){
+        if (this==null||this.root==null) {
+            throw new RuntimeException();
+        }
+        root.showLDR();
+    }
     
-    
+    public void showLRD(){
+        if (this==null||this.root==null) {
+            throw new RuntimeException();
+        }
+        root.showLRD();
+    }
 }
