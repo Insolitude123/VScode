@@ -20,11 +20,11 @@ public class Task141Test {
         l3.next = l4;
         ListNode l5 = new ListNode(5);
         l4.next = l5;
-        l5.next = l3;
+        l5.next = l5;
 
         // boolean b = t141.hasCycle(l1);
 
-        int expected = 3;
+        int expected = 5;
         int actual = t141.whereHaveCycle(l1);
 
         // assertTrue(b);

@@ -50,7 +50,7 @@ public class Task141 {
         } while (slow != fast);
 
         ListNode slow2 = head;
-        if (slow != slow2) {
+        while (slow != slow2) {
             slow = slow.next;
             slow2 = slow2.next;
         }

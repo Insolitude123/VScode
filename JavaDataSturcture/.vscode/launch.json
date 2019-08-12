@@ -1,0 +1,161 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-App<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "app.App",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ArraySearch<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "array.ArraySearch",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MyArray<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "array.MyArray",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MyArrayListTest<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "array.MyArrayListTest",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-hello<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "hello",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Version<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "junit.runner.Version",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TestRunner<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "junit.textui.TestRunner",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MyLoopNodeTest<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "linkedlist.MyLoopNodeTest",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MyNodeTest<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "linkedlist.MyNodeTest",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-XmlConfigurator<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "org.hamcrest.generator.config.XmlConfigurator",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-QDoxTester<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "org.hamcrest.generator.qdox.tools.QDoxTester",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-JUnitCore<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "org.junit.runner.JUnitCore",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Fibonacci<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "recursion.Fibonacci",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Hanoi<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "recursion.Hanoi",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BubbleSort<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "sort.BubbleSort",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-InsertSort<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "sort.InsertSort",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MySort<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "sort.MySort",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-QuickSort<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "sort.QuickSort",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ShellSort<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "sort.ShellSort",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MyQueueTest<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "stackandqueue.MyQueueTest",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MyStackTest<JavaDataSturcture>",
+            "request": "launch",
+            "mainClass": "stackandqueue.MyStackTest",
+            "projectName": "JavaDataSturcture"
+        }
+    ]
+}
