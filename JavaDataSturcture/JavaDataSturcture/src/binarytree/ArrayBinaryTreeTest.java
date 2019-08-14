@@ -14,7 +14,7 @@ public class ArrayBinaryTreeTest {
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
     
     @Test
-    public void TestArrayBinaryTree() {
+    public void testArrayBinaryTree() {
         ArrayBinaryTree tree1=new ArrayBinaryTree(new int[]{1,2,3,4,5,6,7});
         //前序遍历
         // tree1.showDLR();

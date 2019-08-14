@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.junit.Rule;
 import org.junit.contrib.java.lang.system.*;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Assert;
@@ -16,7 +17,7 @@ public class BinaryTreeTest {
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
     @Test
-    public void TestBinaryTree() {
+    public void testBinaryTree() {
         BinaryTree tree1 = new BinaryTree(new TreeNode(1));
         tree1.root.leftNode = new TreeNode(2);
         tree1.root.rightNode = new TreeNode(3);
@@ -45,7 +46,7 @@ public class BinaryTreeTest {
     }
 
     @Test
-    public void TestBinaryTreeSearch() {
+    public void testBinaryTreeSearch() {
         BinaryTree tree1 = new BinaryTree(new TreeNode(1));
         tree1.root.leftNode = new TreeNode(2);
         tree1.root.rightNode = new TreeNode(3);
@@ -77,7 +78,7 @@ public class BinaryTreeTest {
     }
 
     @Test
-    public void TestBinaryTreeDelete() {
+    public void testBinaryTreeDelete() {
         BinaryTree tree1 = new BinaryTree(new TreeNode(1));
         tree1.root.leftNode = new TreeNode(2);
         tree1.root.rightNode = new TreeNode(3);
@@ -96,5 +97,40 @@ public class BinaryTreeTest {
         //判断
         assertEquals(expected, systemOutRule.getLog());
 
+    }
+
+    @Test
+    public void testArrayToTree() {
+        //array to tree
+        BinaryTree tree1=new BinaryTree();
+        int[] arr=new int[]{1,2,3,4,5,6};
+        TreeNode root=tree1.arrayToTree(arr);
+        root.showDLR();
+        String expected = "1 2 4 5 3 6 ";
+
+        // 判断
+        assertEquals(expected, systemOutRule.getLog());
+    }
+
+    @Test
+    public void testTreeToArray() {
+        //tree to array
+        BinaryTree tree1 = new BinaryTree(new TreeNode(1));
+        tree1.root.leftNode = new TreeNode(2);
+        tree1.root.rightNode = new TreeNode(3);
+
+        tree1.root.leftNode.leftNode = new TreeNode(4);
+        tree1.root.leftNode.rightNode = new TreeNode(5);
+
+        tree1.root.rightNode.leftNode = new TreeNode(6);
+        tree1.root.rightNode.rightNode = new TreeNode(7);
+
+
+        int[] actuals=tree1.treeToArray(tree1.root);
+        int[] expecteds=new int[tree1.root.getTreeSize(tree1.root, 0)];
+        for (int i = 0; i < expecteds.length; i++) {
+            expecteds[i]=i+1;
+        }
+        assertArrayEquals(expecteds, actuals);
     }
 }

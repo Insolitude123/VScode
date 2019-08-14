@@ -8,8 +8,63 @@ public class TreeNode {
     TreeNode leftNode;
     TreeNode rightNode;
 
+    public TreeNode(){
+
+    }
+
     public TreeNode(int val) {
         this.val = val;
+    }
+
+    public void arrayToTree(int[] arr, int i) {
+        if (arr == null || arr.length == 0) {
+            throw new RuntimeException();
+        }
+        val = arr[i];
+        if (2 * i + 1 < arr.length) {
+            leftNode = new TreeNode();
+            leftNode.arrayToTree(arr, 2 * i + 1);
+        }
+        if (2 * i + 2 < arr.length) {
+            rightNode = new TreeNode();
+            rightNode.arrayToTree(arr, 2 * i + 2);
+        }
+    }
+
+    public int[] treeToArray(TreeNode root) {
+        if (root==null) {
+            throw new RuntimeException();
+        }
+        int[] arr=new int[getTreeSize(root, 0)];
+        getTreeToArrayValue(arr, root, 0);
+        return arr;
+    }
+
+    public void getTreeToArrayValue(int[] arr,TreeNode root,int index) {
+        if (arr==null||arr.length==0||root==null) {
+            throw new RuntimeException();
+        }
+        arr[index]=root.val;
+        if (root.leftNode!=null) {
+            root.leftNode.getTreeToArrayValue(arr, root.leftNode,2*index+1);
+        }
+        if (root.rightNode!=null) {
+            root.rightNode.getTreeToArrayValue(arr, root.rightNode,2*index+2);
+        }
+    }
+
+    public int getTreeSize(TreeNode root,int size){
+        if (root==null) {
+            throw new RuntimeException();
+        }
+        if (root.leftNode!=null) {
+            size=root.leftNode.getTreeSize(root.leftNode,size);
+        }
+        if (root.rightNode!=null) {
+            size=root.rightNode.getTreeSize(root.rightNode,size);
+        }        
+        size++;
+        return size;
     }
 
     public void showDLR() {

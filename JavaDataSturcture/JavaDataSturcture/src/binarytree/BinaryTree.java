@@ -1,13 +1,40 @@
 package binarytree;
 
+import java.util.Arrays;
+
 /**
  * BinaryTree
  */
 public class BinaryTree {
     TreeNode root;
 
+    public BinaryTree() {
+        
+    }
+
     public BinaryTree(TreeNode root) {
         this.root = root;
+    }
+
+    //将数组转换成树
+    public TreeNode arrayToTree(int[] arr){
+        if (arr==null||arr.length==0) {
+            throw new RuntimeException();
+        }
+        int[] newArr=Arrays.copyOf(arr, arr.length);
+        root=new TreeNode();
+        root.arrayToTree(newArr,0);
+        return root;
+    }
+
+    //将树转换成数组
+    public int[] treeToArray(TreeNode root) {
+        if (root==null) {
+            throw new RuntimeException();
+        }
+        int[] arr=null;
+        arr = root.treeToArray(root);
+        return arr;
     }
 
     // 前序遍历
