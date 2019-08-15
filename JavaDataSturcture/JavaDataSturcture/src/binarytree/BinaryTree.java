@@ -16,6 +16,21 @@ public class BinaryTree {
         this.root = root;
     }
 
+    @Override
+    public String toString() {
+        String s=null;
+        if (root!=null) {
+            s=root.val+" ";
+        }
+        if (root.leftNode!=null) {
+            s=root.leftNode.nextNodeToString(root.leftNode,s);
+        }
+        if (root.rightNode!=null) {
+            s=root.rightNode.nextNodeToString(root.rightNode,s);
+        }
+        return s;
+    }
+
     //将数组转换成树
     public TreeNode arrayToTree(int[] arr){
         if (arr==null||arr.length==0) {

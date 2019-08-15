@@ -102,6 +102,17 @@ public class TreeNode {
         return this.val + "";
     }
 
+    public String nextNodeToString(TreeNode treeNode,String s) {
+        s+=treeNode.val+" ";
+        if (treeNode.leftNode!=null) {
+            s=treeNode.leftNode.nextNodeToString(treeNode.leftNode, s);
+        }
+        if (treeNode.rightNode!=null) {
+            s=treeNode.rightNode.nextNodeToString(treeNode.rightNode, s);
+        }
+        return s;
+    }
+
     public TreeNode searchDLR(int i) {
         TreeNode target = null;
         if (this.val == i) {

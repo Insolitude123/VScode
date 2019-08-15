@@ -106,10 +106,13 @@ public class BinaryTreeTest {
         int[] arr=new int[]{1,2,3,4,5,6};
         TreeNode root=tree1.arrayToTree(arr);
         root.showDLR();
-        String expected = "1 2 4 5 3 6 ";
 
+        // String expected = "1 2 4 5 3 6 ";
         // 判断
-        assertEquals(expected, systemOutRule.getLog());
+        // assertEquals(expected, systemOutRule.getLog());
+
+        int[] actuals=tree1.treeToArray(root);
+        assertArrayEquals(arr, actuals);
     }
 
     @Test
@@ -126,11 +129,19 @@ public class BinaryTreeTest {
         tree1.root.rightNode.rightNode = new TreeNode(7);
 
 
-        int[] actuals=tree1.treeToArray(tree1.root);
-        int[] expecteds=new int[tree1.root.getTreeSize(tree1.root, 0)];
-        for (int i = 0; i < expecteds.length; i++) {
-            expecteds[i]=i+1;
-        }
-        assertArrayEquals(expecteds, actuals);
+        int[] actual=tree1.treeToArray(tree1.root);
+        // int[] expecteds=new int[tree1.root.getTreeSize(tree1.root, 0)];
+        // for (int i = 0; i < expecteds.length; i++) {
+        //     expecteds[i]=i+1;
+        // }
+        // assertArrayEquals(expecteds, actuals);
+
+        BinaryTree tree2=new BinaryTree();
+        tree2.root=tree1.arrayToTree(actual);
+
+        String s1=tree1.toString();
+        String s2=tree2.toString();
+        //若断言的期望值和实际值输入tree1和tree2会判断错误
+        Assert.assertEquals(s1, s2);
     }
 }
