@@ -74,13 +74,13 @@ public class BinarySortTreeTest {
         tree.node.rightNode.leftNode = new BinarySortTreeNode(50);
         tree.node.rightNode.rightNode = new BinarySortTreeNode(70);
 
-        // tree.insert(10);
-        // tree.insert(20);
-        // tree.insert(30);
-        // tree.insert(40);
-        // tree.insert(50);
-        // tree.insert(60);
-        // tree.insert(70);
+        tree.insert(10);
+        tree.insert(20);
+        tree.insert(30);
+        tree.insert(40);
+        tree.insert(50);
+        tree.insert(60);
+        tree.insert(70);
         // String expected = "10 10 20 20 30 30 40 40 50 50 60 60 70 70 ";
 
         tree.insert(5);
@@ -93,7 +93,7 @@ public class BinarySortTreeTest {
         tree.insert(75);
 
         tree.showLDR(tree.node);
-        String expected = "5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 ";
+        String expected = "5 10 10 15 20 20 25 30 30 35 40 40 45 50 50 55 60 60 65 70 70 75 ";
         assertEquals(expected, systemOutRule.getLog());
     }
 }
