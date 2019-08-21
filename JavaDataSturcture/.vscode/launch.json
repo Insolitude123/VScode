@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - HashTableTest",
+            "request": "launch",
+            "mainClass": "hashcode.HashTableTest",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"
