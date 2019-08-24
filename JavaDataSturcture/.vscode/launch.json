@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - GraphTest",
+            "request": "launch",
+            "mainClass": "graph.GraphTest",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - HashTableTest",
             "request": "launch",
             "mainClass": "hashcode.HashTableTest",
