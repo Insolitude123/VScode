@@ -11,15 +11,31 @@ public class MyNode {
     }
 
     public void append(int nextVal) {
+        // MyNode currentNode = this;
+        // while (true) {
+        // MyNode nextNode = currentNode.next;
+        // if (nextNode == null) {
+        // break;
+        // }
+        // currentNode = nextNode;
+        // }
+        // currentNode.next = new MyNode(nextVal);
+        // size++;
         MyNode currentNode = this;
-        while (true) {
-            MyNode nextNode = currentNode.next;
+        MyNode nextNode = currentNode.next;
+        while (currentNode.val == nextVal) {
             if (nextNode == null) {
                 break;
             }
             currentNode = nextNode;
         }
-        currentNode.next = new MyNode(nextVal);
+        if (currentNode.val == nextVal) {
+            MyNode tempNode = currentNode.next;
+            currentNode.next = new MyNode(nextVal);
+            currentNode.next.next = tempNode;
+        } else if (nextNode == null) {
+            currentNode.next = new MyNode(nextVal);
+        }
         size++;
     }
 
@@ -67,7 +83,7 @@ public class MyNode {
         }
         if (currentNode.next == null) {
 
-        } else if (currentNode.next != null && currentNode.val == val) {
+        } if (currentNode.next != null && currentNode.val == val) {
             currentNode.val = currentNode.next.val;
             currentNode.next = currentNode.next.next;
             size--;
