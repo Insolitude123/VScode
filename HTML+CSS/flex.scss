@@ -1,0 +1,35 @@
+$number : 100px;
+$key : margin;
+$i : 3;
+
+.box#{$i} {
+    width : $number;
+    $number : (200px/2);
+  height : $number;
+  #{$key} : auto;
+}
+
+/*
+    多行注释
+*/
+ul{
+    list-style: none;
+    border: 2px;
+    border-radius: 1px;
+    li{
+        background: yellowgreen;
+        div{
+            background: black;
+        }
+        p{
+            background: black;
+            color: white;
+        }
+        &:hover{
+            background: gray;
+            font-size: 20px;
+            font-weight: bold;
+            color: blue;
+        }
+    }
+}

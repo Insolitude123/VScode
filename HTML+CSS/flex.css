@@ -1,0 +1,35 @@
+@charset "UTF-8";
+.box3 {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+/*
+    多行注释
+*/
+ul {
+  list-style: none;
+  border: 2px;
+  border-radius: 1px;
+}
+
+ul li {
+  background: yellowgreen;
+}
+
+ul li div {
+  background: black;
+}
+
+ul li p {
+  background: black;
+  color: white;
+}
+
+ul li:hover {
+  background: gray;
+  font-size: 20px;
+  font-weight: bold;
+  color: blue;
+}
