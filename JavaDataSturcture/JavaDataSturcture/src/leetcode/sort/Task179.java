@@ -20,18 +20,23 @@ package leetcode.sort;
 public class Task179 {
     public String largestNumber(int[] nums) {
         String s = "";
-        for (int i = 9; i <= 0; i--) {
-            if (i==0) {
-                for (int j = 0; j < nums.length; j++) {
-                    
-                }
-            }else{
-                for (int j = 0; j < nums.length; j++) {
-                    
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i+1; j < nums.length ; j++) {        
+                if (Long.parseLong(nums[i]+""+nums[j]+"")<Long.parseLong(nums[j]+""+nums[i]+"")) {
+                    nums[i]=nums[i]^nums[j];
+                    nums[j]=nums[i]^nums[j];
+                    nums[i]=nums[i]^nums[j];
                 }
             }
         }
 
-        return s;
+        for (int n : nums) {
+            s+=n+"";
+        }
+        if (s.startsWith("0")) {
+            return "0";
+        } else {
+            return s;
+        }
     }
 }
