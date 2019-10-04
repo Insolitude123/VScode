@@ -1,6 +1,6 @@
 const http= require('http');
 
-const config=require('./config');
+const config=require('./node_modules/config');
 
 let app = http.createServer((req,res)=>{
     res.writeHead(200,{"Content-Type":"text/html;charset=utf-8"});
