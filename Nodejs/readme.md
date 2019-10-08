@@ -9,10 +9,16 @@
 
    ### 1.3 mongoDB数据库在目标目录中的安装操作 cnpm install mongodb  --save-dev
     需要require导入的包
-    1.const MongoClient = require('mongodb').MongoClicent;
-    2.const assert = require('assert');
-    3.const ObjectId = require('mongodb').objectID;
-    4.const url = 'mongodb://localhost:27017/test';
+    1.const MongoClient = require('mongodb').MongoClicent;//Clicent(客户端)
+    2.const assert = require('assert');//(调试用，参考Junit)
+    3.const ObjectId = require('mongodb').objectID;//编辑数据改变ID的时候使用，ID是字符串，需要改成object类型时(不用也许可以不引入?)
+    4.const url = 'mongodb://localhost:27017/test';(/test表述数据库名称)
+
+    命令行输入：mongod --dbpath F:\MongoDB\MongDataBase
+    以此链接数据库，路径位存放数据库的数据的文件夹
+    1.连接数据库
+    2.增删改查
+    3.关闭数据库
 
 ## 2. 使用自动更新服务器功能需要先启动supervisor (文件名).js
     如果VScode终端报错死循环，注意路径是否正确.
