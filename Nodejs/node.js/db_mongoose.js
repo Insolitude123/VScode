@@ -14,7 +14,7 @@ db.once('open',function(){
 //创建一个和集合相关的schema对象，相当于SQL中的表头(表头就是姓名，年龄，手机号，地址等第一排排头)
 var Schema = mongoose.Schema;
 //获取schema
-var userSchema = new Schema({//原为new Schema
+var userSchema = new Schema({
 //required:true是表示此值为必须的
     username : {type:String,required:true},
     password : {type:String,required:true},
@@ -22,7 +22,7 @@ var userSchema = new Schema({//原为new Schema
     sex : {type:Number,default:0}
 });
 //将schema 对象转化为数据模型
-var User = mongoose.model('User', userSchema);
+var user = mongoose.model('user', userSchema);
 //集合名称如果不是复数形式，在创建数据集合(collection)名称时会自动编程复数，
 //如：user自动变users，child自动变children，所以建议collection的名称直接写复数
 //该数据对象和集合(数据表)关联（'集合名'，schema对象）
@@ -40,7 +40,7 @@ var User = mongoose.model('User', userSchema);
 // User.remove()
 
 //修改数据
-User.update({username:'lisi'})
+user.updateOne({username:'lisi'})
 
 .then((data)=>{
     console.log(data);

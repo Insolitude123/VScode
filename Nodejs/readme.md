@@ -1,5 +1,7 @@
 # 1.package.json 创建本文件，需要进入对应目录输入npm init --yes生成
 
+## mongodb compass 图形化数据库软件
+
 ## 1.1 npm i silly-datetime 创建silly-datetime模块需要进入对应目录输入命令
     创建完成后silly-datetime第三方模块文件夹会出现在node_modules文件夹下
     node_modules文件夹存放所有的第三方模块，安装时没有此文件夹会自动创建

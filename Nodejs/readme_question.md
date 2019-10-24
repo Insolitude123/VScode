@@ -72,7 +72,7 @@ get-ExecutionPolicy(如果报错，根据报错提示信息，使用报错提示
 
 果然不被信任，修改让其信任
     
-set-ExecutionPolicy RemoteSigned
+输入set-ExecutionPolicy RemoteSigned
 解决
 
 ## 怎么办呢? 猜测是express版本更新了,但是我们不知道新版本该怎么玩了.所以我就只好先删除当前安装的express,重新安装以前的版本试试.测试ok.

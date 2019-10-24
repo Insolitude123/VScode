@@ -8,7 +8,7 @@
 ### markdown的使用
 # 配置npm在视频第三集12分10秒//https://www.bilibili.com/video/av53978941/?p=21
 ## 二级标题
-nvm :node version manager
+npm :node version manager
 
 npm :node package manager 
 ``` java
