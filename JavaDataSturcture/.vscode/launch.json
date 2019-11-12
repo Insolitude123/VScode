@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - task5096Test",
+            "request": "launch",
+            "mainClass": "leetcode.task5096Test",
+            "projectName": "JavaDataSturcture"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - GraphTest",
             "request": "launch",
             "mainClass": "graph.GraphTest",
