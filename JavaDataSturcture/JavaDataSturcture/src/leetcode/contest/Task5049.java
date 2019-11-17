@@ -59,16 +59,16 @@ public class Task5049 {
                 break;
             }
         }
-        int count1=0;
-        int count2=0;
-        for (int i = 0; i < arrs.length; i++) {
-            if (arrs[i]=='(') {
-                count1++;
-            }
-            if (arrs[i]==')') {
-                count1++;
-            }
-        }
+        // int count1=0;
+        // int count2=0;
+        // for (int i = 0; i < arrs.length; i++) {
+        //     if (arrs[i]=='(') {
+        //         count1++;
+        //     }
+        //     if (arrs[i]==')') {
+        //         count1++;
+        //     }
+        // }
         
         return "";   
     }
